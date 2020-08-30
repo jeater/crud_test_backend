@@ -20,3 +20,10 @@ Se podran ver los logs en la consola de las consultas y respuestas recibidas.<br
 Se usan los metodos GET, POST, PUT Y DELETE mediante diferentes APIs. 
 
 Se usa nodemon para que el servidor tenga liveroload.
+
+El servidor se conecta a una base de datos MySQL, crear en su servidor PHPMyAdmin: usuario:
+
+**usuario: test
+**password: Password01-
+
+Desde la consola de MySQL Crear la tabla segun los comandos del archivo: database/db.sql

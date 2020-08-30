@@ -22,8 +22,8 @@ app.use(bodyParser.json());
 //mysql
 const connection = mysql.createConnection({
     host: 'localhost',
-    user: 'root',
-    password: 'Jeater01-',
+    user: 'test',
+    password: 'Password01-',
     port: 3306,
     database: "users_list"
 })
@@ -36,7 +36,7 @@ app.get('/users', (req, res) => {
         if (result.length > 0) {
             res.json(result)
         } else {
-            res.send("No results");
+            res.send([]);
         }
     })
 });
@@ -58,7 +58,7 @@ app.post('/addUser', (req, res) => {
             if (result.length > 0) {
                 res.json(result)
             } else {
-                res.send("No results");
+                res.send([]);
             }
         })
     })
@@ -78,7 +78,7 @@ app.put('/updateUser/:id', (req, res) => {
             if (result.length > 0) {
                 res.json(result)
             } else {
-                res.send("No results");
+                res.send([]);
             }
         })
     })
@@ -97,7 +97,7 @@ app.delete('/deleteUser/:id', (req, res) => {
             if (result.length > 0) {
                 res.json(result)
             } else {
-                res.send("No results");
+                res.send([]);
             }
         })
     })
